@@ -4,665 +4,172 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DJ Advisory Services | Boutique M&A Advisory</title>
-    <meta name="description" content="Boutique M&A advisory firm representing premium clients in acquisition searches across the middle market.">
+    <meta name="description" content="Boutique M&A advisory for business owners navigating what comes next. Partner-level attention from first meeting to close.">
+    <link rel="canonical" href="https://djadvisoryservices.com/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --navy: #0B1120;
-            --navy-light: #131C2E;
-            --cream: #F7F5F0;
-            --cream-dark: #EDE9E0;
-            --gold: #B8954F;
-            --gold-light: #D4AF6A;
-            --text: #1A1A2E;
-            --text-muted: #6B7280;
-            --white: #FFFFFF;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        html { scroll-behavior: smooth; }
-
-        body {
-            font-family: 'Inter', -apple-system, sans-serif;
-            font-weight: 400;
-            color: var(--text);
-            background: var(--cream);
-            line-height: 1.7;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        .serif {
-            font-family: 'Cormorant Garamond', Georgia, serif;
-        }
-
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0; left: 0; right: 0;
-            z-index: 100;
-            padding: 24px 48px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: rgba(247, 245, 240, 0.92);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(0,0,0,0.04);
-        }
-
-        .logo {
-            display: flex;
-            align-items: baseline;
-            gap: 10px;
-            text-decoration: none;
-        }
-
-        .logo-mark {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 26px;
-            font-weight: 600;
-            color: var(--navy);
-            letter-spacing: 1px;
-        }
-
-        .logo-text {
-            font-size: 11px;
-            font-weight: 500;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: var(--text-muted);
-        }
-
-        .nav-contact {
-            font-size: 13px;
-            font-weight: 500;
-            color: var(--navy);
-            text-decoration: none;
-            letter-spacing: 0.5px;
-            padding: 10px 24px;
-            border: 1px solid var(--navy);
-            transition: all 0.3s ease;
-        }
-
-        .nav-contact:hover {
-            background: var(--navy);
-            color: var(--cream);
-        }
-
-        /* Hero */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 140px 32px 80px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -50%; left: 50%;
-            transform: translateX(-50%);
-            width: 800px; height: 800px;
-            background: radial-gradient(circle, rgba(184, 149, 79, 0.08) 0%, transparent 60%);
-            pointer-events: none;
-        }
-
-        .hero-label {
-            font-size: 11px;
-            font-weight: 500;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            color: var(--gold);
-            margin-bottom: 32px;
-        }
-
-        .hero h1 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(40px, 6vw, 72px);
-            font-weight: 500;
-            color: var(--navy);
-            line-height: 1.15;
-            max-width: 800px;
-            margin-bottom: 32px;
-            letter-spacing: -0.5px;
-        }
-
-        .hero h1 em {
-            font-style: italic;
-            color: var(--gold);
-        }
-
-        .hero-sub {
-            font-size: 17px;
-            color: var(--text-muted);
-            max-width: 540px;
-            margin-bottom: 48px;
-            font-weight: 300;
-            line-height: 1.8;
-        }
-
-        .hero-cta {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            padding: 16px 40px;
-            background: var(--navy);
-            color: var(--cream);
-            font-size: 13px;
-            font-weight: 500;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            text-decoration: none;
-            transition: all 0.4s ease;
-        }
-
-        .hero-cta:hover {
-            background: var(--gold);
-            color: var(--navy);
-            transform: translateY(-2px);
-        }
-
-        .hero-scroll {
-            position: absolute;
-            bottom: 40px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 8px;
-            color: var(--text-muted);
-            font-size: 10px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            text-decoration: none;
-            animation: float 3s ease-in-out infinite;
-        }
-
-        .hero-scroll span {
-            width: 1px;
-            height: 40px;
-            background: linear-gradient(to bottom, var(--gold), transparent);
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateX(-50%) translateY(0); }
-            50% { transform: translateX(-50%) translateY(-8px); }
-        }
-
-        /* Divider */
-        .divider {
-            width: 40px;
-            height: 1px;
-            background: var(--gold);
-            margin: 0 auto;
-        }
-
-        /* Section base */
-        section {
-            padding: 120px 32px;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        section h2 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(32px, 4vw, 48px);
-            font-weight: 500;
-            color: var(--navy);
-            line-height: 1.2;
-            margin-bottom: 24px;
-        }
-
-        section h2 em {
-            font-style: italic;
-            color: var(--gold);
-        }
-
-        section .lead {
-            font-size: 17px;
-            color: var(--text-muted);
-            max-width: 640px;
-            font-weight: 300;
-            line-height: 1.8;
-        }
-
-        /* About */
-        .about {
-            text-align: center;
-        }
-
-        .about .divider {
-            margin-bottom: 48px;
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 48px;
-            margin-top: 80px;
-            text-align: left;
-        }
-
-        .about-item {
-            padding: 40px;
-            background: var(--white);
-            border: 1px solid rgba(0,0,0,0.04);
-            transition: all 0.4s ease;
-        }
-
-        .about-item:hover {
-            border-color: var(--gold);
-            transform: translateY(-4px);
-            box-shadow: 0 20px 60px rgba(0,0,0,0.06);
-        }
-
-        .about-item-num {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 48px;
-            font-weight: 300;
-            color: var(--gold);
-            opacity: 0.4;
-            line-height: 1;
-            margin-bottom: 20px;
-        }
-
-        .about-item h3 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 22px;
-            font-weight: 600;
-            color: var(--navy);
-            margin-bottom: 12px;
-        }
-
-        .about-item p {
-            font-size: 14px;
-            color: var(--text-muted);
-            line-height: 1.7;
-        }
-
-        /* Focus */
-        .focus {
-            background: var(--navy);
-            color: var(--cream);
-            padding: 120px 32px;
-            max-width: none;
-        }
-
-        .focus-inner {
-            max-width: 1100px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
-        }
-
-        .focus h2 {
-            color: var(--cream);
-            margin-bottom: 32px;
-        }
-
-        .focus h2 em {
-            color: var(--gold-light);
-        }
-
-        .focus p {
-            color: rgba(247, 245, 240, 0.7);
-            font-weight: 300;
-            line-height: 1.8;
-            margin-bottom: 20px;
-        }
-
-        .focus-stats {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-        }
-
-        .focus-stat {
-            border-left: 1px solid var(--gold);
-            padding-left: 24px;
-        }
-
-        .focus-stat-num {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 48px;
-            font-weight: 500;
-            color: var(--gold);
-            line-height: 1;
-        }
-
-        .focus-stat-label {
-            font-size: 12px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: rgba(247, 245, 240, 0.5);
-            margin-top: 8px;
-        }
-
-        /* Principal */
-        .principal {
-            text-align: center;
-        }
-
-        .principal .divider {
-            margin-bottom: 48px;
-        }
-
-        .principal-card {
-            max-width: 700px;
-            margin: 60px auto 0;
-            padding: 60px;
-            background: var(--white);
-            border: 1px solid rgba(0,0,0,0.04);
-            position: relative;
-        }
-
-        .principal-card::before {
-            content: '"';
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 120px;
-            color: var(--gold);
-            opacity: 0.15;
-            position: absolute;
-            top: 20px;
-            left: 30px;
-            line-height: 1;
-        }
-
-        .principal-avatar {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--cream-dark), var(--cream));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 32px;
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 28px;
-            font-weight: 600;
-            color: var(--gold);
-            border: 2px solid var(--gold);
-        }
-
-        .principal-name {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 28px;
-            font-weight: 600;
-            color: var(--navy);
-            margin-bottom: 4px;
-        }
-
-        .principal-title {
-            font-size: 12px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: var(--gold);
-            margin-bottom: 24px;
-        }
-
-        .principal-bio {
-            font-size: 15px;
-            color: var(--text-muted);
-            line-height: 1.8;
-            font-weight: 300;
-            margin-bottom: 24px;
-        }
-
-        .principal-quote {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 20px;
-            font-style: italic;
-            color: var(--navy);
-            line-height: 1.6;
-        }
-
-        /* CTA */
-        .cta {
-            text-align: center;
-            padding: 160px 32px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: var(--navy);
-            z-index: -1;
-        }
-
-        .cta::after {
-            content: '';
-            position: absolute;
-            top: -30%; right: -20%;
-            width: 600px; height: 600px;
-            background: radial-gradient(circle, rgba(184, 149, 79, 0.1) 0%, transparent 60%);
-            pointer-events: none;
-        }
-
-        .cta h2 {
-            color: var(--cream);
-            margin-bottom: 24px;
-        }
-
-        .cta h2 em {
-            color: var(--gold-light);
-        }
-
-        .cta p {
-            color: rgba(247, 245, 240, 0.6);
-            font-weight: 300;
-            max-width: 480px;
-            margin: 0 auto 48px;
-        }
-
-        .cta-btn {
-            display: inline-block;
-            padding: 18px 48px;
-            background: var(--gold);
-            color: var(--navy);
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            text-decoration: none;
-            transition: all 0.4s ease;
-        }
-
-        .cta-btn:hover {
-            background: var(--gold-light);
-            transform: translateY(-2px);
-            box-shadow: 0 12px 40px rgba(184, 149, 79, 0.3);
-        }
-
-        .cta-email {
-            display: block;
-            margin-top: 32px;
-            color: rgba(247, 245, 240, 0.5);
-            font-size: 14px;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .cta-email:hover {
-            color: var(--gold);
-        }
-
-        /* Footer */
-        footer {
-            padding: 60px 32px;
-            text-align: center;
-            border-top: 1px solid rgba(0,0,0,0.06);
-        }
-
-        .footer-logo {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 20px;
-            font-weight: 600;
-            color: var(--navy);
-            margin-bottom: 8px;
-        }
-
-        .footer-tag {
-            font-size: 11px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: var(--text-muted);
-            margin-bottom: 24px;
-        }
-
-        .footer-info {
-            font-size: 13px;
-            color: var(--text-muted);
-            margin-bottom: 8px;
-        }
-
-        .footer-disclaimer {
-            font-size: 11px;
-            color: var(--text-muted);
-            opacity: 0.6;
-            max-width: 600px;
-            margin: 32px auto 0;
-            line-height: 1.6;
-        }
-
-        /* Responsive */
-        @media (max-width: 900px) {
-            nav { padding: 20px 24px; }
-            .about-grid { grid-template-columns: 1fr; }
-            .focus-inner { grid-template-columns: 1fr; gap: 48px; }
-            .focus-stats { grid-template-columns: 1fr 1fr; }
-            section { padding: 80px 24px; }
-            .cta { padding: 100px 24px; }
-            .principal-card { padding: 40px 24px; }
-        }
-
-        @media (max-width: 480px) {
-            .hero { padding: 120px 20px 60px; }
-            .hero h1 { font-size: 36px; }
-            .focus-stats { grid-template-columns: 1fr; }
-            .nav-contact { display: none; }
-        }
-
-        /* Reduced motion */
-        @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after {
-                animation-duration: 0.01ms !important;
-                transition-duration: 0.01ms !important;
-            }
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/styles.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "DJ Advisory Services",
+        "description": "Boutique M&A advisory for middle-market business owners",
+        "url": "https://djadvisoryservices.com",
+        "telephone": "+1-212-555-0198",
+        "email": "david@djadvisoryservices.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "120 Broadway, Suite 1600",
+            "addressLocality": "New York",
+            "addressRegion": "NY",
+            "postalCode": "10271",
+            "addressCountry": "US"
+        },
+        "founder": { "@type": "Person", "name": "David James" }
+    }
+    </script>
 </head>
 <body>
-    <nav>
-        <a href="#" class="logo">
-            <span class="logo-mark">DJ</span>
-            <span class="logo-text">Advisory Services</span>
-        </a>
-        <a href="#contact" class="nav-contact">Get in Touch</a>
-    </nav>
-
-    <header class="hero">
-        <p class="hero-label">Boutique M&A Advisory — New York</p>
-        <h1>Advisory for <em>Discerning</em><br>Acquirers & Owners</h1>
-        <p class="hero-sub">We represent premium clients in middle-market acquisitions — providing the strategic counsel, discretion, and execution that complex transactions demand.</p>
-        <a href="#contact" class="hero-cta">Begin a Conversation</a>
-        <a href="#about" class="hero-scroll">
-            <span></span>
-            Discover
-        </a>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="/" class="logo">
+                <span class="logo-mark">DJ</span>
+                <span class="logo-text">DJ Advisory Services</span>
+            </a>
+            <nav class="main-nav" id="mainNav">
+                <a href="/about.html">About</a>
+                <a href="/services.html">Services</a>
+                <a href="/team.html">Team</a>
+                <a href="/contact.html">Contact</a>
+            </nav>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
     </header>
 
-    <section class="about" id="about">
-        <div class="divider"></div>
-        <h2>A Firm Built for<br><em>Complex Transactions</em></h2>
-        <p class="lead">DJ Advisory Services is a boutique M&A advisory practice serving clients who expect more than process — they expect judgment. We take on a select number of engagements each year, ensuring every client receives partner-level attention from first meeting through close.</p>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <p class="hero-label">Boutique M&A Advisory — New York</p>
+                <h1 class="hero-title">Transactions,<br><em>Handled.</em></h1>
+                <p class="hero-subtitle">Boutique M&A advisory for business owners navigating what comes next. Partner-level attention from first meeting to close.</p>
+                <div class="hero-cta">
+                    <a href="/contact.html" class="btn btn-primary">Schedule a Confidential Conversation</a>
+                    <a href="/services.html" class="btn btn-ghost">Explore Our Services</a>
+                </div>
+            </div>
+        </section>
 
-        <div class="about-grid">
-            <div class="about-item">
-                <div class="about-item-num">01</div>
-                <h3>Buy-Side Advisory</h3>
-                <p>We identify, evaluate, and negotiate acquisitions that align with your strategic vision — from target search through integration planning.</p>
+        <section class="trust-bar">
+            <div class="container trust-grid">
+                <div class="trust-item">
+                    <span class="trust-number">20+</span>
+                    <span class="trust-label">Years Experience</span>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-number">40+</span>
+                    <span class="trust-label">Closed Transactions</span>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-number">$2B+</span>
+                    <span class="trust-label">Value Advised</span>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-number">4–6</span>
+                    <span class="trust-label">Engagements Per Year</span>
+                </div>
             </div>
-            <div class="about-item">
-                <div class="about-item-num">02</div>
-                <h3>Sell-Side Representation</h3>
-                <p>When the time comes to realize value, we guide founders through the entire process — maximizing outcome while preserving legacy.</p>
+        </section>
+
+        <section class="section services-preview">
+            <div class="container">
+                <header class="section-header">
+                    <p class="section-label">What We Do</p>
+                    <h2 class="section-title">Services Designed for<br><em>Business Owners</em></h2>
+                </header>
+                <div class="services-grid">
+                    <article class="service-card">
+                        <div class="service-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                        </div>
+                        <h3>Sell-Side Advisory</h3>
+                        <p>When you're ready to sell, we guide you from preparation through close — maximizing value while preserving what you built.</p>
+                        <a href="/services.html#sell-side" class="link-arrow">Learn more →</a>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                        </div>
+                        <h3>Buy-Side Advisory</h3>
+                        <p>We identify, evaluate, and negotiate acquisitions that align with your strategic vision.</p>
+                        <a href="/services.html#buy-side" class="link-arrow">Learn more →</a>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3v18h18"/><path d="M7 16l4-4 4 4 5-6"/></svg>
+                        </div>
+                        <h3>Valuation & Fairness Opinions</h3>
+                        <p>Independent, defensible analysis for boards, shareholders, and stakeholders.</p>
+                        <a href="/services.html#valuation" class="link-arrow">Learn more →</a>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+                        </div>
+                        <h3>Capital Raising</h3>
+                        <p>Access to private equity, debt, and strategic capital partners on terms that work for you.</p>
+                        <a href="/services.html#capital" class="link-arrow">Learn more →</a>
+                    </article>
+                </div>
             </div>
-            <div class="about-item">
-                <div class="about-item-num">03</div>
-                <h3>Valuation & Opinions</h3>
-                <p>Independent, defensible analysis grounded in rigorous financial modeling and deep industry knowledge for boards and fiduciaries.</p>
+        </section>
+
+        <section class="section testimonial-section">
+            <div class="container testimonial-inner">
+                <blockquote>"David didn't just run a process. He ran <em>our</em> process. Every decision felt like ours, but every risk had been thought through three moves ahead."</blockquote>
+                <cite>— Former Client, Industrial Services CEO</cite>
+            </div>
+        </section>
+
+        <section class="section cta-section">
+            <div class="container cta-inner">
+                <h2>Ready to explore what's next?</h2>
+                <p>Your first conversation is always confidential, always complimentary.</p>
+                <a href="/contact.html" class="btn btn-primary btn-large">Schedule a Call</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <span class="logo-mark">DJ</span>
+                <span class="logo-text">DJ Advisory Services</span>
+                <p>Boutique M&A advisory for the middle market.</p>
+            </div>
+            <div class="footer-links">
+                <a href="/about.html">About</a>
+                <a href="/services.html">Services</a>
+                <a href="/team.html">Team</a>
+                <a href="/contact.html">Contact</a>
+                <a href="/legal.html">Disclaimer</a>
+            </div>
+            <div class="footer-contact">
+                <p>120 Broadway, Suite 1600</p>
+                <p>New York, NY 10271</p>
+                <p>david@djadvisoryservices.com</p>
+                <p>(212) 555-0198</p>
             </div>
         </div>
-    </section>
-
-    <section class="focus">
-        <div class="focus-inner">
-            <div>
-                <h2>Representing <em>Premium Clients</em><br>in Premium Transactions</h2>
-                <p>Our clients are institutional investors, family offices, and strategic acquirers with the capital and conviction to execute. We help them find, evaluate, and acquire businesses that fit their criteria — managing the complexity so they can focus on the opportunity.</p>
-                <p>Every engagement is led personally by our Managing Director. No handoffs. No junior bankers learning at your expense.</p>
-            </div>
-            <div class="focus-stats">
-                <div class="focus-stat">
-                    <div class="focus-stat-num">20+</div>
-                    <div class="focus-stat-label">Years Experience</div>
-                </div>
-                <div class="focus-stat">
-                    <div class="focus-stat-num">40+</div>
-                    <div class="focus-stat-label">Closed Deals</div>
-                </div>
-                <div class="focus-stat">
-                    <div class="focus-stat-num">$2B+</div>
-                    <div class="focus-stat-label">Value Advised</div>
-                </div>
-                <div class="focus-stat">
-                    <div class="focus-stat-num">100%</div>
-                    <div class="focus-stat-label">Partner-Led</div>
-                </div>
-            </div>
+        <div class="container footer-legal">
+            <p>© 2026 DJ Advisory Services. All rights reserved.</p>
+            <p class="disclaimer">DJ Advisory Services provides M&A advisory services and is not a registered broker-dealer.</p>
         </div>
-    </section>
-
-    <section class="principal">
-        <div class="divider"></div>
-        <h2>Led by <em>Experience</em></h2>
-        <p class="lead">Our Managing Director has spent two decades in middle-market M&A — from the Big Four to boutique investment banking to building his own practice.</p>
-
-        <div class="principal-card">
-            <div class="principal-avatar">DJ</div>
-            <div class="principal-name">David James</div>
-            <div class="principal-title">Managing Director & Founder</div>
-            <p class="principal-bio">David founded DJ Advisory Services after nearly two decades advising on middle-market transactions across industrials, healthcare, business services, and technology. He holds an MBA in Finance and Strategy and is a Certified Merger & Acquisition Advisor (CM&AA).</p>
-            <p class="principal-quote">"The best transactions happen when the advisor becomes invisible — the client feels informed, in control, and confident at every step."</p>
-        </div>
-    </section>
-
-    <section class="cta" id="contact">
-        <h2>Ready to Explore<br><em>What's Next?</em></h2>
-        <p>Your first conversation is always confidential and complimentary. We respond to every inquiry within 24 hours.</p>
-        <a href="mailto:david@djadvisoryservices.com" class="cta-btn">Schedule a Confidential Call</a>
-        <a href="mailto:david@djadvisoryservices.com" class="cta-email">david@djadvisoryservices.com</a>
-    </section>
-
-    <footer>
-        <div class="footer-logo">DJ Advisory Services</div>
-        <div class="footer-tag">Boutique M&A Advisory</div>
-        <p class="footer-info">120 Broadway, Suite 1600 &middot; New York, NY 10271</p>
-        <p class="footer-info">david@djadvisoryservices.com &middot; (212) 555-0198</p>
-        <p class="footer-disclaimer">DJ Advisory Services provides mergers and acquisitions advisory and consulting services. We are not a registered broker-dealer and do not offer securities or investment advice regulated by the SEC or FINRA. Nothing herein constitutes an offer to sell or solicitation of an offer to buy any security.</p>
     </footer>
+
+    <script src="/assets/main.js"></script>
 </body>
 </html>
